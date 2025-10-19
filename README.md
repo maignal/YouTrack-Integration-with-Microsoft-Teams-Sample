@@ -1,6 +1,6 @@
 # YouTrack Integration with Microsoft Teams (Sample)
 
-Early concept of an Integration of Youtrack with Microsoft Teams in the form of a Java app that polls a YouTrack Cloud instance for new issues and sends notifications to a messenger client. This repository contains a minimal working prototype and a mock messenger implementation.
+Early concept of an Integration of YouTrack with Microsoft Teams in the form of a Java app that polls a YouTrack Cloud instance for new issues and sends notifications to a messenger client. This repository contains a minimal working prototype and a mock messenger implementation.
 
 ## Requirements
 
