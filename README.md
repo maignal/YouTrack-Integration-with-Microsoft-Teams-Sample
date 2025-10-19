@@ -2,6 +2,9 @@
 
 Early concept of an Integration of YouTrack with Microsoft Teams in the form of a Java app that polls a YouTrack Cloud instance for new issues and sends notifications to a messenger client. This repository contains a minimal working prototype and a mock messenger implementation.
 
+![demo](https://github.com/user-attachments/assets/e1cde3e9-6c78-4530-bf8a-da6ce5651bf9)
+
+
 ## Requirements
 
 - Java 17 (or compatible JDK)
