@@ -60,24 +60,16 @@ java -jar target/youtrack-integration-1.0.0.jar create "Issue summary here"
 
 This will create an issue in the project configured by `project.id` using the provided summary.
 
-## Implementing a real messenger
-
-The included `MessengerClient` is a stub. To forward notifications to Microsoft Teams, implement `sendMarkdown(String markdown)` to POST a JSON payload to a Teams incoming webhook URL (or use the Microsoft Graph API for richer scenarios). Example steps:
-
-1. Create an incoming webhook in the target Teams channel and note the webhook URL.
-2. Replace the `sendMarkdown` body with an HTTP POST to the webhook URL, setting `Content-Type: application/json` and sending a JSON body like `{"text":"..."}` or the adaptive card payload you prefer.
-3. Securely store the webhook URL (environment variable or secrets manager) and avoid committing it to source control.
-
 ## Troubleshooting
 
 - If you see authentication errors, verify `YOUTRACK_TOKEN` is correct and has needed scopes.
 - If API responses fail, check `youtrack.url` in `config.properties` and ensure the URL includes the correct host (no trailing slash required; the client expects base URL).
 - For debugging, run the program from an interactive shell so you can see stdout logs from the mock messenger and the app.
 
-## Notes and next steps
+## Next Steps : Implementing a real messenger
 
-- Add logging instead of System.out for production readiness.
-- Add unit tests for `YouTrackClient` (mock HTTP) and `NotificationPoller`.
-- Add a concrete `MessengerClient` implementation that posts to Microsoft Teams and reads its configuration (webhook URL) from an environment variable.
+The included `MessengerClient` is a stub. To forward notifications to Microsoft Teams, implement `sendMarkdown(String markdown)` to POST a JSON payload to a Teams incoming webhook URL (or use the Microsoft Graph API for richer scenarios). Example steps:
 
-
+1. Create an incoming webhook in the target Teams channel and note the webhook URL.
+2. Replace the `sendMarkdown` body with an HTTP POST to the webhook URL, setting `Content-Type: application/json` and sending a JSON body like `{"text":"..."}` or the adaptive card payload you prefer.
+3. Securely store the webhook URL (environment variable or secrets manager) and avoid committing it to source control.
