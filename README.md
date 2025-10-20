@@ -7,7 +7,7 @@ Early concept of an Integration of YouTrack with Microsoft Teams in the form of 
 
 ## Requirements
 
-- Java 17 (or compatible JDK)
+- Java 17 or later (OpenJDK 21 is compatible)
 - Maven 3.6+
 
 ## Build
